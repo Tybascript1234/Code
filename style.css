@@ -1,0 +1,383 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial;
+    color: rgb(95 99 104);
+}
+icon {
+    width: 24px;
+    height: 24px;
+    opacity: .8;
+    background-size: cover;
+}
+button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000;
+}
+.zex::before {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wave-button {
+    position: relative;
+    overflow: hidden;
+    }
+    .wave-button .ripple {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #9a9a9a46;
+    border-radius: 80%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear infinite;
+    pointer-events: none;
+}
+    
+@keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
+
+/* checkbox */
+
+.checkbox {
+    cursor: pointer;
+    margin: 4px;
+    transition: ease 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 3px;
+    width: 18px; /* يمكنك تغيير الحجم حسب الحاجة */
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('unchecked-image.png') no-repeat center center;
+    background-size: contain;
+    border: 1px solid #b4b4b400;
+    background-color: #46566e08;
+    cursor: pointer;
+    box-shadow: 0px -1px 0px #ccccccb3 inset, 0px -1px 1px #00000000;
+    }
+    
+.checkbox:hover {
+    transition: ease 0.2s;
+    /* box-shadow: 0 0 0 0.2em #d1d8e0 inset; */
+}
+.checkbox:focus {
+    border: 1px solid #0877b9;
+}
+    
+.checkbox:checked {
+    background: url(image/image.png) no-repeat center center;
+    background-size: cover;
+    background-color: #2a86f3;
+    box-shadow: 0 0 0 1em #2a86f3 inset;
+    border: solid 1px #2a84f300;
+}
+    
+.checkbox:checked::before {
+    animation: ttt 0.3s ease forwards;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: url(image/image.png) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    /* top: 0; */
+    left: 0;
+    /* transform: scale(0.90); */
+    /* padding: 0; */
+    margin: 0;
+}
+.checkbox:hover::after {
+    padding: 19px;
+    background-color: #0084ff09;
+    margin: 0;
+}
+.checkbox:active::after {
+    background-color: #0084ff21;
+}
+    
+@keyframes ttt {
+    from {
+      transform: scale(0.50);
+    }
+    to {
+      transform: none;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/* cont_div */
+.cont_div {
+    transition: ease 0.3s;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 260px;
+    height: 100%;
+    border-right: solid 1px #e4e8ed;
+}
+.menu {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 1px #e4e8ed;
+}
+.logo {
+    position: relative;
+    padding: 16px;
+}
+.xo {
+    cursor: pointer;
+}
+.xo div {
+    transition: ease 0.2s;
+    margin-left: 8px;
+    height: 21px;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(68, 70, 73);
+    user-select: none;
+}
+.xo:hover div {
+    color: rgb(95 99 104);
+
+}
+.xo:active div {
+    color: rgb(127, 133, 141);
+}
+.ffr {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+body .menu_button {
+    justify-content: center;
+    margin-bottom: 9px;
+}
+.zoom {
+    transition: ease 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000;
+    width: 36px;
+    height: 36px;
+    border-radius: 25px;
+    border: solid 1px #e4e8ed00;
+    margin: 0 1px;
+}
+.zoom:hover {
+    border: solid 1px #e4e8ed;
+}
+.zoom icon {
+    width: 20px;
+    height: 20px;
+}
+.xxs {
+    overflow: hidden;
+    border-top: solid 1px #e4e8ed;
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    height: 30px;
+    padding: 0 16px;
+}
+.xxsz {
+    user-select: none;
+}
+.xxsz label {
+    cursor: pointer;
+    padding-right: 5px;
+}
+.on {
+    display: none;
+}
+.hevo {
+    width: 68px;
+}
+.hevo .logo div {
+    display: none;
+}
+.hevo .menu_button{
+    display: grid;
+    height: 244px;
+    text-align: -webkit-center;
+}
+.hevo .logo {
+    display: grid;
+    height: auto;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.hevo .ffr {
+    right: auto;
+    position: relative;
+}
+.hevo .on {
+    display: block;
+}
+.hevo .off {
+    display: none;
+}
+.hevo .xxs {
+    padding: 0 7px;
+}
+.hevo .xxsz label {
+    display: none;
+}
+.hevo .files {
+    display: none;
+}
+.hevo .xo {
+    width: max-content;
+    margin: auto;
+}
+.hevo .zoom {
+    width: 40px;
+    height: 40px;
+}
+.hevo .zoom icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* cont_div2 */
+.cont_div2 {
+    position: relative;
+    flex: auto;
+    height: 100%;
+}
+.zood {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    border-bottom: solid 1px #e4e8ed;
+}
+.cont_div2_div {
+    height: 100%;
+}
+.joker {
+    flex: 1 1 auto;
+    height: 100%;
+    margin-right: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.zood-sar {
+    transition: ease 0.2s;
+    overflow: hidden;
+    height: 32px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+}
+.zood-sar:hover {
+    border: solid 1px #a8a8a8;
+}
+.zood-sar:focus-within {
+    border: solid 1px #0877b9;
+    box-shadow: 0px 1px 2px #0877b93b;
+}
+.zood-sar input {
+    border: none;
+    font-size: 14px;
+    outline: none;
+    margin-right: 5px;
+    border-right: solid 1px #e4e8ed;
+    padding: 0;
+    padding-right: 4px;
+}
+.zood_div icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px;
+}
+.zood-arr button {
+    transition: ease 0.2s;
+    padding: 0;
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.zood-arr button:hover {
+    background-color: #50586e0c;
+}
+.zood-arr button:active {
+    background-color: #50586e25;
+}
+.zood-arr button icon {
+    width: 20px;
+    height: 20px;
+}
+.lang {
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.lang:hover {
+    overflow: initial;
+}
+.lang:hover #target-container {
+    transition: ease 0.5s;
+    opacity: 1;
+    position: fixed;
+}
+#target-container {
+    transition: ease 0.0s;
+    opacity: 0;
+    position: absolute;
+}
+
+@media screen and (max-width:800px) {
+    body .hevo .ffr {
+        top: 37px;
+        right: 0;
+        position: fixed;
+    }
+    body .cont_div {
+        z-index: 1000;
+        background: white;
+        position: fixed;
+        border-right: solid 1px #e4e8ed00;
+        box-shadow: 0 0 16px rgba(0, 0, 0, .28);
+    }
+    body .hevo {
+        width: 0;
+    }
+}
