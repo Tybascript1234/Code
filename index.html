@@ -3,62 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of codes</title>
-    <link rel="icon" href="image/visual-studio-code.png">
-    <!-- link --------------------------- -->
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <!-- script --------------------------- -->
-    <script src="script.js"></script>
-    <script src="https://tybascript1234.github.io/Languag/embed.js"></script>
 </head>
-<body>
-
-    <div class="content">
-        <!-- 1 -->
-         <div class="cont_div" id="myDiv">
-            <div class="menu">
-                <div class="logo flex">
-                    <a class="flex xo">
-                        <icon style="background-image: url(image/visual-studio-code.png);opacity: 1;"></icon>
-                        <div>World of codes</div>
-                    </a>
-                    <button class="wave-button ffr" id="toggleButton"><icon class="off" style="background-image: url(icons/arrow_back_⬅️.svg);"></icon><icon class="on" style="background-image: url(icons/menu_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);"></icon></button>
+<body> 
+    <input type="text" class="writingBox only12345" placeholder="Enter text" autofocus />
+        <div class="content12345">
+        <div class="cont12345">
+            <div class="cons12345">
+                <button class="wave-button tab-btn flash123" data-target="div1"><icon style="background-image: url(icons/language.svg);"></icon></button>
+                <button class="wave-button tab-btn flash123" data-target="div2"><icon style="background-image: url(icons/code.svg);"></icon></button>
+                <button class="wave-button flash123" id="clearTextBtn"><icon style="background-image: url(icons/backspace.svg);"></icon></button>
+                <button class="wave-button tab-btn flash123" style="border: none;" data-target="div3"><icon style="background-image: url(icons/settings.svg);"></icon></button>
+            </div>
+        </div>
+        <!-- --- -->
+        <div class="div12345e">
+            <!-- language -->
+            <div class="cont23445 content-div" id="div1">
+                <div id="keyboard"></div>
+                <div class="flex">
+                    <button id="toggleCaps" class="only12345 wave-button" style="display: block;margin-left: 5px;">🔠 كابتل</button>
+                    <select name="" id="languageSelect" class="only12345 wave-button"></select>
                 </div>
-                <div class="menu_button flex">
-                    <div class="lang">
-                        <button class="wave-button zoom zex"><icon style="background-image: url(icons/language.svg);"></icon></button>
-                        <div id="target-container"></div>
+            </div>
+            <!-- code -->
+            <div class="cont23445 content-div" id="div2">
+                <div id="symbols"></div>
+            </div>
+            <!-- settings -->
+            <div class="cont23445 content-div" id="div3">
+                <label>حجم الخط:
+                    <input type="range" id="fontSizeRange" min="10" max="40" value="16">
+                </label>
+              
+                <label>استدارة الحواف:
+                    <input type="range" id="radiusRange" min="0" max="30" value="5">
+                </label>
+              
+                <label>صورة الخلفية:
+                    <input type="file" id="bgInput" style="display: none;" accept="image/*">
+                    <label for="bgInput" class="only12345 wave-button">صورة الخلفية</label>
+                </label>
+              
+                <button id="removeBgBtn" class="only12345 wave-button" style="display: none;">❌ إزالة الصورة</button>
+              
+                <!-- زر إعدادات اللغة -->
+                <button id="languageSettingsBtn" class="only12345 wave-button">إعدادات اللغة</button>
+                
+                <!-- أضفت حقل إضافة إيموجي/صورة هنا -->
+                <label>إضافة إيموجي/صورة:
+                    <input type="file" id="emojiInput" accept="image/*">
+                </label>
+                
+                <div class="cont23445" id="languageSettings">
+                    <div>
+                        <div class="zex12345">
+                            <h3>اختر اللغات التي تريد تمكينها</h3>
+                            <button id="closeSettings" class="only12345 wave-button"><icon style="background-image: url(icons/arrow_forward\ ➡️.svg);"></icon></button>
+                        </div>
+                        
+                        <ul id="languagesList"></ul>
                     </div>
-                    <button class="wave-button zoom zex"><icon style="background-image: url(icons/description_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);"></icon></button>
-                    <button class="wave-button zoom zex"><icon style="background-image: url(icons/upload_file_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);"></icon></button>
-                    <button class="wave-button zoom zex"><icon style="background-image: url(icons/create_new_folder_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);"></icon></button>
-                    <button class="wave-button zoom zex"><icon style="background-image: url(icons/download_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);"></icon></button>
-                    <button class="wave-button zoom zex"><icon style="background-image: url(icons/play_arrow_24dp_1F1F1F_FILL1_wght400_GRAD0_opsz24.svg);"></icon></button>
                 </div>
             </div>
-            <!-- ---- -->
-            <div class="files"></div>
-            <!-- ---- -->
-            <div class="xxs flex">
-                <div class="xxsz flex"><label for="in1">Autosave</label><input title="Autosave" type="checkbox" id="in1" class="checkbox"></div>
-                <div class="xxsz flex"><label for="in2">Suggestions</label><input title="Suggestions" type="checkbox" id="in2" class="checkbox"></div>
-            </div>
-         </div>
-        <!-- 2 -->
-        <div class="cont_div2">
-            <div class="zood flex">
-                <div class="joker"></div>
-                <div class="zood-sar flex">
-                    <div class="flex zood_div"><icon style="background-image: url(icons/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24\ \(1\).svg);"></icon><input type="text" title="Ctrl + F" placeholder="Search file"></div>
-                    <div class="zood-arr flex">
-                        <button class="flex"><icon style="background-image: url(icons/keyboard_arrow_down_⬇️.svg);"></icon></button>
-                        <button class="flex"><icon style="background-image: url(icons/keyboard_arrow_up⬆️.svg);"></icon></button>
-                    </div>
-                </div>
-            </div>
-            <div class="cont_div2_div"></div>
         </div>
     </div>
 
+    <script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            if (!window.alertOpen) {
+                initializeWaveButtons();
+            }
+        }, 100);
+
+        function initializeWaveButtons() {
+            const elements = document.querySelectorAll('.wave-button');
+
+            elements.forEach(element => {
+                let isRippleActive = false;
+
+                function createRipple(e) {
+                    if (isRippleActive) return;
+
+                    isRippleActive = true;
+
+                    const ripple = document.createElement('span');
+                    const rect = element.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+
+                    // هنا نجعلها دائمًا في المنتصف
+                    const x = rect.width / 2 - size / 2;
+                    const y = rect.height / 2 - size / 2;
+
+                    ripple.style.width = ripple.style.height = `${size}px`;
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    ripple.classList.add('ripple');
+
+                    element.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                        isRippleActive = false;
+                    }, 600);
+                }
+
+                element.addEventListener('mousedown', createRipple);
+                element.addEventListener('touchstart', createRipple);
+            });
+        }
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll('.tab-btn');
+  const divs = document.querySelectorAll('.content-div');
+
+  // تحديد أول زر وأول ديف
+  const firstButton = buttons[0];
+  const firstDiv = divs[0];
+
+  // إعطاء كلاس rely لأول زر
+  if (firstButton) {
+    firstButton.classList.add('rely');
+  }
+
+  // إظهار أول ديف
+  if (firstDiv) {
+    firstDiv.classList.add('show');
+  }
+
+  // أحداث النقر على الأزرار
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // إزالة كلاس rely من جميع الأزرار
+      buttons.forEach(btn => btn.classList.remove('rely'));
+
+      // إضافة كلاس rely للزر الحالي
+      button.classList.add('rely');
+
+      // إخفاء جميع الديفات
+      divs.forEach(div => div.classList.remove('show'));
+
+      // إظهار الديف المناسب
+      const targetId = button.getAttribute('data-target');
+      const targetDiv = document.getElementById(targetId);
+      if (targetDiv) {
+        targetDiv.classList.add('show');
+      }
+    });
+  });
+});
+
+    </script>
+
+    <script>
+const languageLetters = {
+    // اللغات الأصلية (محددة افتراضيًا)
+    "English": "q w e r t y u i o p a s d f g h j k l z x c v b n m".split(" "),
+    "العربية": "ض ص ث ق ف غ ع ه خ ح ج د ش س ي ب ل ا ت ن م ك ط ئ ء ؤ ر لا ى ة و ز ظ".split(" "),
+    "Français": "a z e r t y u i o p q s d f g h j k l m w x c v b n".split(" "),
+    "Español": "q w e r t y u i o p a s d f g h j k l ñ z x c v b n m".split(" "),
+    "Deutsch": "q w e r t z u i o p ü a s d f g h j k l ö ä y x c v b n m".split(" "),
+    "русский": "й ц у к е н г ш щ з х ъ ф ы в а п р о л д ж э я ч с м и т ь б ю".split(" "),
+    "Ελληνικά": "α σ δ φ γ η ξ κ λ ; ζ χ ψ ω β ν μ θ , . /".split(" "),
+    "עברית": "/ ' ק ר א ט ו ן ם פ ] [ ש ד ג כ ע י ח ל ך ף , ז ס ב ה נ מ צ ת ץ .".split(" "),
+    "فارسی": "ض ص ث ق ف غ ع ه خ ح ج چ پ ش س ی ب ل ا ت ن م ک گ ظ ط ز ر ذ د ئ و".split(" "),
+    "Türkçe": "q w e r t y u ı o p ğ ü a s d f g h j k l ş i z x c v b n m ö ç".split(" "),
+    "Italiano": "q w e r t y u i o p è a s d f g h j k l ò à z x c v b n m".split(" "),
+    
+    // اللغات الجديدة (غير محددة افتراضيًا)
+    "中文": "的 一 是 在 不 了 有 和 人 这 中 大 为 上 个 国 我 以 要 他 时 来 用 们 生 到 作 地 于 出".split(" "),
+    "日本語": "あ い う え お か き く け こ さ し す せ そ た ち つ て と な に ぬ ね の は ひ ふ へ ほ".split(" "),
+    "한국어": "ㄱ ㄴ ㄷ ㄹ ㅁ ㅂ ㅅ ㅇ ㅈ ㅊ ㅋ ㅌ ㅍ ㅎ ㅏ ㅑ ㅓ ㅕ ㅗ ㅛ ㅜ ㅠ ㅡ ㅣ ㅐ ㅒ ㅔ ㅖ ㅘ ㅙ".split(" "),
+    "हिन्दी": "क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह".split(" "),
+    "বাংলা": "অ আ ই ঈ উ ঊ ঋ এ ঐ ও ঔ ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ द ध न प फ ब भ म".split(" "),
+    "Português": "q w e r t y u i o p a s d f g h j k l ç z x c v b n m".split(" "),
+    "Nederlands": "q w e r t y u i o p a s d f g h j k l z x c v b n m".split(" "),
+    "Polski": "a ą b c ć d e ę f g h i j k l ł m n ń o ó p r s ś t u w y z ź ż".split(" "),
+    "Svenska": "q w e r t y u i o p å a s d f g h j k l ö ä z x c v b n m".split(" "),
+    "Norsk": "q w e r t y u i o p å a s d f g h j k l ø æ z x c v b n m".split(" "),
+    "Dansk": "q w e r t y u i o p å a s d f g h j k l æ ø z x c v b n m".split(" "),
+    "Suomi": "q w e r t y u i o p å a s d f g h j k l ö ä z x c v b n m".split(" "),
+    "Magyar": "q w e r t z u i o p ő ú a s d f g h j k l é á ű z x c v b n m ö ü ó".split(" "),
+    "Čeština": "q w e r t z u i o p ů a s d f g h j k l é á ž š č ř z x c v b n m í ý".split(" "),
+    "Română": "q w e r t y u i o p ă â a s d f g h j k l ș ț z x c v b n m î".split(" "),
+    "Українська": "й ц у к е н г ш щ з х ї ф і в а п р о л д ж є я ч с м и т ь б ю".split(" "),
+    "Български": "я в е р т ъ у и о п ш ю а с д ф г х й к л ж з ц ч с м и т ь б н".split(" "),
+    "Hrvatski": "q w e r t z u i o p š đ a s d f g h j k l č ć ž z x c v b n m".split(" "),
+    "ภาษาไทย": "ก ข ฃ ค ฅ ฆ ง จ ฉ ช ซ ฌ ญ ฎ ฏ ฐ ฑ ฒ ณ ด ต ถ ท ธ น บ ป ผ ฝ พ ฟ ภ ม".split(" "),
+    "Tiếng Việt": "a ă â b c d đ e ê g h i k l m n o ô ơ p q r s t u ư v x y".split(" "),
+    "Bahasa Indonesia": "a b c d e f g h i j k l m n o p q r s t u v w x y z".split(" "),
+    "Bahasa Melayu": "a b c d e f g h i j k l m n o p q r s t u v w x y z".split(" "),
+    "Filipino": "a b c d e f g h i j k l m n ñ ng o p q r s t u v w x y z".split(" "),
+    "اردو": "ق و ع ر ت ی ؤ پ ا س د ف گ ہ ج ک ل ؛ ء ّ ز ش خ ح ض ص ط ظ غ چ ث ذ ڈ".split(" "),
+    "ქართული": "ა ბ გ დ ე ვ ზ თ ი კ ლ მ ნ ო პ ჟ რ ს ტ უ ფ ქ ღ ყ შ ჩ ც ძ წ ჭ ხ ჯ ჰ".split(" "),
+    "മലയാളം": "ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര ല വ ശ ഷ".split(" "),
+    "தமிழ்": "அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ க ங ச ஜ ஞ ட ண த ந ன ப ம ய ர ல வ ழ ள ற ன".split(" "),
+    "తెలుగు": "అ ఆ ఇ ఈ ఉ ఊ ఎ ఏ ఐ ఒ ఓ ఔ క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న".split(" ")
+};
+
+const languagesWithCapital = ["English", "Français", "Español", "Deutsch", "Türkçe", "Italiano", 
+                            "Português", "Nederlands", "Polski", "Svenska", "Norsk", "Dansk", 
+                            "Suomi", "Magyar", "Čeština", "Română", "Hrvatski", "Bahasa Indonesia", 
+                            "Bahasa Melayu", "Filipino"];
+
+const languagesStateKey = "languagesState";
+
+const languageSelect = document.getElementById("languageSelect");
+const keyboard = document.getElementById("keyboard");
+const symbols = document.getElementById("symbols");
+const toggleCaps = document.getElementById("toggleCaps");
+const fontSizeRange = document.getElementById("fontSizeRange");
+const radiusRange = document.getElementById("radiusRange");
+const bgInput = document.getElementById("bgInput");
+const removeBgBtn = document.getElementById("removeBgBtn");
+const writingBox = document.querySelector(".writingBox");
+const emojiInput = document.getElementById("emojiInput");
+const languageSettingsBtn = document.getElementById("languageSettingsBtn");
+const languageSettings = document.getElementById("languageSettings");
+const closeSettings = document.getElementById("closeSettings");
+const languagesList = document.getElementById("languagesList");
+const clearTextBtn = document.getElementById("clearTextBtn");
+
+let isCapital = false;
+let currentLanguage = "English";
+
+// تحميل حالة اللغات المحفوظة من التخزين المحلي
+let savedLanguages = JSON.parse(localStorage.getItem(languagesStateKey)) || {};
+
+// تهيئة حالة اللغات إذا كانت فارغة
+if (Object.keys(savedLanguages).length === 0) {
+    // تفعيل اللغات الأصلية فقط افتراضيًا
+    const originalLanguages = ["English", "العربية", "Français", "Español", "Deutsch", 
+                             "русский", "Ελληνικά", "עברית", "فارسی", "Türkçe", "Italiano"];
+    
+    Object.keys(languageLetters).forEach(lang => {
+        savedLanguages[lang] = originalLanguages.includes(lang);
+    });
+    localStorage.setItem(languagesStateKey, JSON.stringify(savedLanguages));
+}
+
+function renderLanguageSettings() {
+    languagesList.innerHTML = '';
+    Object.keys(languageLetters).forEach(lang => {
+        const li = document.createElement("li");
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = savedLanguages[lang] === true;
+        checkbox.id = `lang-${lang}`;
+
+        checkbox.addEventListener("change", () => {
+            savedLanguages[lang] = checkbox.checked;
+            localStorage.setItem(languagesStateKey, JSON.stringify(savedLanguages));
+            
+            // إذا كانت اللغة الحالية هي التي تم إلغاء تفعيلها
+            if (!checkbox.checked && currentLanguage === lang) {
+                // البحث عن أول لغة مفعلة
+                const firstEnabled = Object.keys(savedLanguages).find(l => savedLanguages[l]);
+                if (firstEnabled) {
+                    currentLanguage = firstEnabled;
+                    languageSelect.value = currentLanguage;
+                    renderKeyboard();
+                }
+            }
+            
+            // إذا تم تفعيل لغة جديدة
+            if (checkbox.checked) {
+                // إذا كانت الإنجليزية أو إذا لم تكن هناك لغة محددة
+                if (lang === "English" || !currentLanguage) {
+                    currentLanguage = lang;
+                    languageSelect.value = currentLanguage;
+                    renderKeyboard();
+                }
+            }
+            
+            renderLanguages();
+        });
+
+        label.textContent = lang;
+        label.htmlFor = `lang-${lang}`;
+        li.appendChild(checkbox);
+        li.appendChild(label);
+        languagesList.appendChild(li);
+    });
+}
+
+function renderLanguages() {
+    languageSelect.innerHTML = "";
+    let enabledLanguages = Object.keys(savedLanguages).filter(lang => savedLanguages[lang]);
+    
+    if (enabledLanguages.length === 0) {
+        // إذا لم تكن هناك لغات مفعلة، نفعّل الإنجليزية افتراضياً
+        savedLanguages["English"] = true;
+        localStorage.setItem(languagesStateKey, JSON.stringify(savedLanguages));
+        enabledLanguages = ["English"];
+        currentLanguage = "English";
+    }
+    
+    // إذا كانت اللغة الحالية غير مفعلة، نختار أول لغة مفعلة
+    if (!enabledLanguages.includes(currentLanguage)) {
+        currentLanguage = enabledLanguages[0];
+    }
+
+    enabledLanguages.forEach(lang => {
+        const option = document.createElement("option");
+        option.value = lang;
+        option.textContent = lang;
+        option.selected = (lang === currentLanguage);
+        languageSelect.appendChild(option);
+    });
+}
+
+function renderKeyboard() {
+    keyboard.innerHTML = "";
+    let letters = languageLetters[currentLanguage];
+    if (!Array.isArray(letters)) letters = String(letters).split("");
+
+    const displayLetters = isCapital && languagesWithCapital.includes(currentLanguage)
+        ? letters.map(l => l.toUpperCase())
+        : letters;
+
+    displayLetters.forEach(letter => {
+        const btn = document.createElement("button");
+        btn.classList.add("class12345");
+        btn.textContent = letter;
+        btn.style.fontSize = fontSizeRange.value + "px";
+        btn.style.borderRadius = radiusRange.value + "px";
+        btn.addEventListener("click", () => {
+            writingBox.value += letter;
+            writingBox.focus();
+        });
+        keyboard.appendChild(btn);
+    });
+
+    // إظهار أو إخفاء زر الأحرف الكبيرة حسب اللغة المحددة
+    toggleCaps.style.display = languagesWithCapital.includes(currentLanguage) ? "inline-block" : "none";
+}
+
+function renderSymbols() {
+    const symbolsList = "() [] {} <> ! @ # $ % ^ & * - _ + = ? / \\ | ~ ` : ; \" ' , .".split(" ");
+    symbols.innerHTML = "";
+    symbolsList.forEach(sym => {
+        const btn = document.createElement("button");
+        btn.classList.add("wave-button");
+        btn.textContent = sym;
+        btn.style.fontSize = fontSizeRange.value + "px";
+        btn.style.borderRadius = radiusRange.value + "px";
+        btn.addEventListener("click", () => {
+            writingBox.value += sym;
+            writingBox.focus();
+        });
+        symbols.appendChild(btn);
+    });
+}
+
+// فتح نافذة إعدادات اللغة
+languageSettingsBtn.addEventListener("click", () => {
+    languageSettings.style.display = "block";
+    renderLanguageSettings();
+});
+
+// إغلاق نافذة إعدادات اللغة
+closeSettings.addEventListener("click", () => {
+    languageSettings.style.display = "none";
+});
+
+// حذف النص والصور من خانة الكتابة
+clearTextBtn.addEventListener("click", () => {
+    writingBox.value = "";
+    writingBox.focus();
+});
+
+languageSelect.addEventListener("change", () => {
+    currentLanguage = languageSelect.value;
+    isCapital = false;
+    renderKeyboard();
+});
+
+toggleCaps.addEventListener("click", () => {
+    isCapital = !isCapital;
+    renderKeyboard();
+});
+
+fontSizeRange.addEventListener("input", () => {
+    renderKeyboard();
+    renderSymbols();
+});
+
+radiusRange.addEventListener("input", () => {
+    renderKeyboard();
+    renderSymbols();
+});
+
+bgInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            keyboard.style.backgroundImage = `url('${evt.target.result}')`;
+            removeBgBtn.style.display = "inline-block";
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+removeBgBtn.addEventListener("click", () => {
+    keyboard.style.backgroundImage = "";
+    bgInput.value = "";
+    removeBgBtn.style.display = "none";
+});
+
+emojiInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            const emoji = document.createElement("img");
+            emoji.src = evt.target.result;
+            emoji.className = "emoji-img";
+            writingBox.value += emoji.outerHTML;
+            writingBox.focus();
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// التركيز التلقائي على خانة الكتابة عند تحميل الصفحة
+writingBox.focus();
+
+// التهيئة الأولية
+renderLanguageSettings();
+renderLanguages();
+renderKeyboard();
+renderSymbols();
+    </script>
 </body>
 </html>
